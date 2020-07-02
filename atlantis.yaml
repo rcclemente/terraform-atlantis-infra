@@ -1,5 +1,14 @@
 version: 3
 projects:
 - dir: basic_ec2
+  workflow: default
+  terraform_version: v0.12.25
   autoplan:
     when_modified: ["*.tf*"]
+workflows:
+  default:
+    plan:
+      steps:
+        - run: rm -rf .terraform
+        - init
+        - plan
