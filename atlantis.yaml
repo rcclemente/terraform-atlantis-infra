@@ -5,6 +5,7 @@ projects:
   terraform_version: v0.12.25
   autoplan:
     when_modified: ["*.tf*"]
+  apply_requirements: [approved]
 workflows:
   default:
     plan:
