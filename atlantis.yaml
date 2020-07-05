@@ -6,6 +6,12 @@ projects:
   autoplan:
     when_modified: ["*.tf*"]
   apply_requirements: [approved]
+- dir: region_test_ec2
+  workflow: default
+  terraform_version: v0.12.25
+  autoplan:
+    when_modified: ["*.tf*"]
+  apply_requirements: [approved]
 workflows:
   default:
     plan:
