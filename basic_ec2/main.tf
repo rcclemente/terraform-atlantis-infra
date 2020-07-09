@@ -3,6 +3,6 @@ resource "aws_instance" "web" {
   instance_type = "t2.micro"
   availability_zone = "us-east-1a"
   tags = {
-    Name = "HelloWorld"
+    Name = "terraform"
   }
 }
