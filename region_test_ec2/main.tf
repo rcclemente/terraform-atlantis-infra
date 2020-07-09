@@ -6,5 +6,11 @@ resource "aws_instance" "web" {
   tags = {
     Name = "HelloWorld"
     Project = "atlantis"
+    Platform = "atlantis"
   }
 }
+
+output "ip" {
+  value = aws_instance.example.public_ip
+}
+
